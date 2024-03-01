@@ -1,5 +1,5 @@
 #!/bin/sh
-# Install and configure MariaDB database with predefined variables
+# Install and configure your selected database with predefined variables
 # git clone https://github.com/tschettervictor/freebsd-database-scripts
 
 # Check for root privileges
