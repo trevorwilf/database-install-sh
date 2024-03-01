@@ -53,6 +53,7 @@ fi
 # Database Installation
 #
 #####
+
 pkg install -y postgresql15-server postgresql15-client
 sysrc postgresql_enable=yes
 cp -f "${INCLUDES_PATH}"/pgpass /root/.pgpass
