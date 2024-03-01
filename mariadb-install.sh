@@ -65,7 +65,7 @@ mysql -u root -e "DROP DATABASE IF EXISTS test;"
 mysql -u root -e "DELETE FROM mysql.db WHERE Db='test' OR Db='test\\_%';"
 mysql -u root -e "FLUSH PRIVILEGES;"
 mysqladmin --user=root password "${DB_ROOT_PASSWORD}" reload
-cp -f /mnt/includes/my.cnf /root/.my.cnf
+cp -f "${INCLUDES_PATH}"/my.cnf /root/.my.cnf
 sed -i '' "s|mypassword|${DB_ROOT_PASSWORD}|" /root/.my.cnf
 
 # Save Passwords
