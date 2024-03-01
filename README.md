@@ -1,4 +1,4 @@
-# freebsd-database-install
+# database-install-sh
 Script to automate installing different databases
 
 ## Status
@@ -10,7 +10,7 @@ This script should work out of the box with any FreeBSD version
 * The only prerequisite is to edit the included `db-config` file with your preferred database, database name and database user
 
 ### Installation
-Download the repository to a convenient directory on your FreeBSD system (or jail) by changing to that directory and running `git clone https://github.com/tschettervictor/freebsd-database-install`.  Then change into the new `freebsd-database-install` directory and edit the `db-config` file with your preferred values, and set one of the database variables to "1". Only ONE of the databases should be set to "1", otherwise the script will return an error.
+Download the repository to a convenient directory on your FreeBSD system (or jail) by changing to that directory and running `git clone https://github.com/tschettervictor/database-install-sh`.  Then change into the new `database-install-sh` directory and edit the `db-config` file with your preferred values, and set one of the database variables to "1". Only ONE of the databases should be set to "1", otherwise the script will return an error.
 ```
 MARIADB=0
 MYSQL=0
