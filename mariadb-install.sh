@@ -15,7 +15,7 @@ fi
 #####
 
 # Initialize defaults
-CONFIG_NAME="mariadb-config"
+CONFIG_NAME="db-config"
 DATABASE="MariaDB"
 DB_NAME=""
 DB_USER=""
@@ -38,7 +38,7 @@ INCLUDES_PATH="${SCRIPTPATH}"/includes
 #
 #####
 
-# Check that necessary variables were set by mariadb-config
+# Check that necessary variables were set by db-config
 if [ -z "${DB_NAME}" ]; then
   echo 'Configuration error: DB_NAME must be set'
   exit 1
