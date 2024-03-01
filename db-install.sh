@@ -1,6 +1,6 @@
 #!/bin/sh
 # Install and configure your selected database with predefined variables
-# git clone https://github.com/tschettervictor/freebsd-database-scripts
+# git clone https://github.com/tschettervictor/database-install-sh
 
 # Check for root privileges
 if ! [ $(id -u) = 0 ]; then
