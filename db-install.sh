@@ -126,7 +126,7 @@ elif [ "${POSTGRESQL}" = 1 ]; then
 	service postgresql initdb
 	service postgresql start
 	sed -i '' "s|mypassword|${DB_ROOT_PASSWORD}|" /root/.pgpass
-	if ! psql -U postgres -c "CREATE DATABASE ${DB_NAME};" then
+	if ! psql -U postgres -c "CREATE DATABASE ${DB_NAME};"; then
 		echo "Failed to create PostgreSQL database, aborting"
 		exit 1
 	fi
