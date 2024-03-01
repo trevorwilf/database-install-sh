@@ -58,9 +58,9 @@ if [ $POSTGRESQL -eq 1 ] && [ $MYSQL -eq 1 ]; then
   exit 1
 fi
 
-if [ $MARIADB -eq 1 ] then DATABASE="MariaDB"
-if [ $MYSQL -eq 1 ] then DATABASE="MySQL"
-if [ $POSTGRESQL -eq 1 ] then DATABASE="PostgreSQL"
+if [ $MARIADB -eq 1 ]; then DATABASE="MariaDB"
+if [ $MYSQL -eq 1 ]; then DATABASE="MySQL"
+if [ $POSTGRESQL -eq 1 ]; then DATABASE="PostgreSQL"
 
 if [ -z "${DATABASE}" ]; then
   echo 'Configuration error: DATABASE must be set'
@@ -82,7 +82,7 @@ fi
 #####
 
 echo "You have chosen to install ${DATABASE}. Proceeding with setup..."
-if [ "${MARIADB}" = 1 ] then
+if [ "${MARIADB}" = 1 ]; then
 	pkg install -y mariadb106-server mariadb106-client
 	sysrc mysql_enable=yes
 	service mysql-server start
@@ -99,7 +99,7 @@ if [ "${MARIADB}" = 1 ] then
 	mysqladmin --user=root password "${DB_ROOT_PASSWORD}" reload
 	cp -f "${INCLUDES_PATH}"/my.cnf /root/.my.cnf
 	sed -i '' "s|mypassword|${DB_ROOT_PASSWORD}|" /root/.my.cnf
-elif [ "${MYSQL}" = 1 ] then
+elif [ "${MYSQL}" = 1 ]; then
 	pkg install -y mysql81-server mysql81-client
 	sysrc mysql_enable=yes
 	service mysql-server start
@@ -116,7 +116,7 @@ elif [ "${MYSQL}" = 1 ] then
 	mysqladmin --user=root password "${DB_ROOT_PASSWORD}" reload
 	cp -f "${INCLUDES_PATH}"/my.cnf /root/.my.cnf
 	sed -i '' "s|mypassword|${DB_ROOT_PASSWORD}|" /root/.my.cnf
-elif [ "${POSTGRESQL}" = 1 ] then
+elif [ "${POSTGRESQL}" = 1 ]; then
 	pkg install -y postgresql15-server postgresql15-client
 	sysrc postgresql_enable=yes
 	cp -f "${INCLUDES_PATH}"/pgpass /root/.pgpass
