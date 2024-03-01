@@ -53,6 +53,9 @@ fi
 # Database Installation
 #
 #####
+pkg install -y mariadb106-server mariadb106-client
+sysrc mysql_enable=yes
+service mysql-server start
 
 if ! mysql -u root -e "CREATE DATABASE ${DB_NAME};"; then
 	echo "Failed to create MariaDB database, aborting"
