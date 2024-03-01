@@ -59,8 +59,11 @@ if [ $POSTGRESQL -eq 1 ] && [ $MYSQL -eq 1 ]; then
 fi
 
 if [ $MARIADB -eq 1 ]; then DATABASE="MariaDB"
+elif
 if [ $MYSQL -eq 1 ]; then DATABASE="MySQL"
+elif
 if [ $POSTGRESQL -eq 1 ]; then DATABASE="PostgreSQL"
+fi
 
 if [ -z "${DATABASE}" ]; then
   echo 'Configuration error: DATABASE must be set'
