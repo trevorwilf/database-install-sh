@@ -17,7 +17,7 @@ DB_USER="databaseuser"
 ```
 
 ### Execution
-Once you've downloaded the script and prepared the configuration file, run the preferred database script ( eg: `mysql-install.sh` ). The script will run for maybe a minute. When it finishes, your database will be configured, and you will be shown the root password as well as the user password for the database
+Once you've downloaded the script and prepared the configuration file, run the preferred database script ( eg: `./mysql-install.sh` ). The script will run for maybe a minute. When it finishes, your database will be configured, and you will be shown the root password as well as the user password for the database
 
 ### Notes
 - These scripts are simple straightforward scripts to get a database up and running quickly and efficiently
