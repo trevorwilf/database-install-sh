@@ -1,2 +1,5 @@
+MariaDB=0
+MySQL=0
+PostgreSQL=0
 DB_NAME=""
 DB_USER=""
