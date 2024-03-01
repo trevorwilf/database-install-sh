@@ -58,11 +58,12 @@ if [ $POSTGRESQL -eq 1 ] && [ $MYSQL -eq 1 ]; then
   exit 1
 fi
 
-if [ $MARIADB -eq 1 ]; then DATABASE="MariaDB"
-elif
-if [ $MYSQL -eq 1 ]; then DATABASE="MySQL"
-elif
-if [ $POSTGRESQL -eq 1 ]; then DATABASE="PostgreSQL"
+if [ $MARIADB -eq 1 ]; then
+	DATABASE="MariaDB"
+elif [ $MYSQL -eq 1 ]; then
+	DATABASE="MySQL"
+elif [ $POSTGRESQL -eq 1 ]; then
+	DATABASE="PostgreSQL"
 fi
 
 if [ -z "${DATABASE}" ]; then
