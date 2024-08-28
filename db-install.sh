@@ -121,7 +121,7 @@ elif [ "${MYSQL}" = 1 ]; then
 	cp -f "${INCLUDES_PATH}"/my.cnf /root/.my.cnf
 	sed -i '' "s|mypassword|${DB_ROOT_PASSWORD}|" /root/.my.cnf
 elif [ "${POSTGRESQL}" = 1 ]; then
-	pkg install -y postgresql15-server postgresql15-client
+	pkg install -y postgresql16-server postgresql16-client postgresql16-contrib
 	sysrc postgresql_enable=yes
 	cp -f "${INCLUDES_PATH}"/pgpass /root/.pgpass
 	chmod 600 /root/.pgpass
